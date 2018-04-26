@@ -51,5 +51,8 @@ include vendor/zen/configs/packages.mk
 # Branding
 include vendor/zen/configs/version.mk
 
+# System Additions
+include vendor/zen/configs/system_additions.mk
+
 # Overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/zen/overlay/common
