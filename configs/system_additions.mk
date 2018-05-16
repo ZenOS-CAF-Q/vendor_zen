@@ -17,3 +17,9 @@ PRODUCT_PACKAGES += \
     StockTheme \
     PixelBaseTheme \
     StockBaseTheme
+
+# DarkUI Packages
+PRODUCT_PACKAGES += \
+    SettingsDarkThemeOverlay \
+    SystemDarkThemeOverlay \
+    SysuiQsDarkThemeOverlay
