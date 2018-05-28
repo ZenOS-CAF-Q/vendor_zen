@@ -15,6 +15,7 @@
 PRODUCT_PACKAGES += \
     PixelTheme \
     StockTheme \
+    PinkTheme \
     PixelBaseTheme \
     StockBaseTheme \
     StockBaseFixedTheme
