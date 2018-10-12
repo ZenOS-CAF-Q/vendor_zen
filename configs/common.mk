@@ -28,6 +28,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.dun.override=0
 
+# Backup Tool
+PRODUCT_COPY_FILES += \
+    vendor/zen/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
+    vendor/zen/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
+    vendor/zen/prebuilt/common/bin/50-zen.sh:system/addon.d/50-zen.sh \
+    vendor/zen/prebuilt/common/bin/blacklist:system/addon.d/blacklist
+
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/zen/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/zen/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/zen/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Packages
 include vendor/zen/configs/packages.mk
 
