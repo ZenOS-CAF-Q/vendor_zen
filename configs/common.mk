@@ -42,6 +42,9 @@ PRODUCT_COPY_FILES += \
     vendor/zen/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# ART definitions
+include vendor/zen/configs/art.mk
+
 # Packages
 include vendor/zen/configs/packages.mk
 
