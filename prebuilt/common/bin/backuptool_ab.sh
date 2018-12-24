@@ -2,14 +2,17 @@
 #
 # Backup and restore addon /system files
 #
- export S=/system
+export S=/system
 export C=/postinstall/tmp/backupdir
-export V=9.0
- export ADDOND_VERSION=2
- # Scripts in /system/addon.d expect to find backuptool.functions in /tmp
+export V=9
+
+export ADDOND_VERSION=2
+
+# Scripts in /system/addon.d expect to find backuptool.functions in /tmp
 mkdir -p /postinstall/tmp/
 cp -f /postinstall/system/bin/backuptool_ab.functions /postinstall/tmp/backuptool.functions
- # Preserve /system/addon.d in /tmp/addon.d
+
+# Preserve /system/addon.d in /tmp/addon.d
 preserve_addon_d() {
   if [ -d /system/addon.d/ ]; then
     mkdir -p /postinstall/tmp/addon.d/
@@ -27,7 +30,8 @@ preserve_addon_d() {
      chmod 755 /postinstall/tmp/addon.d/*.sh
   fi
 }
- # Restore /postinstall/system/addon.d from /postinstall/tmp/addon.d
+
+# Restore /postinstall/system/addon.d from /postinstall/tmp/addon.d
 restore_addon_d() {
   if [ -d /postinstall/tmp/addon.d/ ]; then
     mkdir -p /postinstall/system/addon.d/
@@ -35,17 +39,19 @@ restore_addon_d() {
     rm -rf /postinstall/tmp/addon.d/
   fi
 }
- # Proceed only if /system is the expected major and minor version
+
+# Proceed only if /system is the expected major and minor version
 check_prereq() {
 # If there is no build.prop file the partition is probably empty.
 if [ ! -r /system/build.prop ]; then
     return 0
 fi
- grep -q "^ro.mod.version=$V.*" /system/build.prop && return 1
+ grep -q "^ro.mod.version=$V" /system/build.prop && return 1
  echo "Not backing up files from incompatible version: $V"
 return 0
 }
- check_blacklist() {
+
+check_blacklist() {
   if [ -f /system/addon.d/blacklist -a -d /$1/addon.d/ ]; then
       ## Discard any known bad backup scripts
       cd /$1/addon.d/
@@ -56,7 +62,8 @@ return 0
       done
   fi
 }
- check_whitelist() {
+
+check_whitelist() {
   found=0
   if [ -f /system/addon.d/whitelist ];then
       ## forcefully keep any version-independent stuff
@@ -73,7 +80,8 @@ return 0
   fi
   return $found
 }
- # Execute /system/addon.d/*.sh scripts with $1 parameter
+
+# Execute /system/addon.d/*.sh scripts with $1 parameter
 run_stage() {
 if [ -d /postinstall/tmp/addon.d/ ]; then
   for script in $(find /postinstall/tmp/addon.d/ -name '*.sh' |sort -n); do
@@ -87,7 +95,8 @@ if [ -d /postinstall/tmp/addon.d/ ]; then
   done
 fi
 }
- case "$1" in
+
+case "$1" in
   backup)
     mkdir -p $C
     if check_prereq; then
@@ -120,4 +129,5 @@ fi
     echo "Usage: $0 {backup|restore}"
     exit 1
 esac
- exit 0
+
+exit 0
