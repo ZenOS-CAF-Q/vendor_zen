@@ -7,5 +7,5 @@
     <overlay android:priority="1" android:targetPackage="android" android:category="android.base_theme" />
 
     <application android:hasCode="false"
-                 android:label="Stocktato" />
+                 android:label="Stockra" />
 </manifest>
