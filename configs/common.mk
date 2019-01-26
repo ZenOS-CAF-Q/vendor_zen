@@ -33,3 +33,6 @@ include vendor/zen/configs/packages.mk
 
 # Branding
 include vendor/zen/configs/version.mk
+
+# Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/zen/overlay/common
