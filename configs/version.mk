@@ -1,4 +1,4 @@
-# Copyright (C) 2017 AospExtended ROM
+# Copyright (C) 2019 ZenOS ROM
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -14,22 +14,25 @@
 
 ZEN_MOD_VERSION = 9.0
 
-ifeq ($(ZEN_BETA),true)
-    ZEN_BUILD_TYPE := BETA
+ifndef ZEN_BUILD_TYPE
+    ZEN_BUILD_TYPE := UNOFFICIAL
 endif
 
 CURRENT_DEVICE=$(shell echo "$(TARGET_PRODUCT)" | cut -d'_' -f 2,3)
 
-LIST = $(shell curl -s https://raw.githubusercontent.com/Zen-OS/vendor_zen/pie/zen.devices)
-FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
-ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
-    IS_OFFICIAL=true
-    ZEN_BUILD_TYPE := OFFICIAL
-else
-    ZEN_BUILD_TYPE := UNOFFICIAL
+ifeq ($(ZEN_OFFICIAL),true)
+     LIST = $(shell curl -s https://raw.githubusercontent.com/Zen-OS/vendor_zen/pie/zen.devices)
+     FOUND_DEVICE =  $(filter $(CURRENT_DEVICE), $(LIST))
+      ifeq ($(FOUND_DEVICE),$(CURRENT_DEVICE))
+        IS_OFFICIAL=true
+        ZEN_BUILD_TYPE := OFFICIAL
+
+      else
+        ZEN_BUILD_TYPE := UNOFFICIAL
+      endif
 endif
 
-ZEN_VERSION := ZENOS-$(ZEN_MOD_VERSION)-$(CURRENT_DEVICE)-$(ZEN_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+ZEN_VERSION := ZenOS-$(ZEN_MOD_VERSION)-$(CURRENT_DEVICE)-$(ZEN_BUILD_TYPE)-$(shell date -u +%Y%m%d)
 
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
@@ -37,7 +40,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.zen.releasetype=$(ZEN_BUILD_TYPE) \
   ro.mod.version=$(ZEN_MOD_VERSION)
 
-ZEN_DISPLAY_VERSION := ZENOS-$(ZEN_MOD_VERSION)-$(ZEN_BUILD_TYPE)
+ZEN_DISPLAY_VERSION := ZenOS-$(ZEN_MOD_VERSION)-$(ZEN_BUILD_TYPE)
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.zen.display.version=$(ZEN_DISPLAY_VERSION)
