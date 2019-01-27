@@ -5,6 +5,7 @@ _contents := $(_contents)    "Zen":{$(newline)
 # see build/core/soong_config.mk for the add_json_* functions you can use here
 $(call add_json_bool, Has_legacy_camera_hal1,               $(filter true,$(TARGET_HAS_LEGACY_CAMERA_HAL1)))
 $(call add_json_bool, Needs_legacy_camera_hal1_dyn_native_handle, $(filter true,$(TARGET_NEEDS_LEGACY_CAMERA_HAL1_DYN_NATIVE_HANDLE)))
+$(call add_json_bool, Should_skip_waiting_for_qsee,         $(filter true,$(TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE)))
 $(call add_json_bool, Supports_hw_fde,                      $(filter true,$(TARGET_HW_DISK_ENCRYPTION)))
 $(call add_json_bool, Supports_hw_fde_perf,                 $(filter true,$(TARGET_HW_DISK_ENCRYPTION_PERF)))
 $(call add_json_bool, Supports_legacy_hw_fde,               $(filter true,$(TARGET_LEGACY_HW_DISK_ENCRYPTION)))

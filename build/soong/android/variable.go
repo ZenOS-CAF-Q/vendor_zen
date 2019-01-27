@@ -11,6 +11,10 @@ type Product_variables struct {
 		Cppflags []string
 	}
 
+	Should_skip_waiting_for_qsee struct {
+		Cflags []string
+	}
+
 	Supports_hw_fde struct {
 		Cflags []string
 		Header_libs []string
@@ -53,6 +57,7 @@ type ProductVariables struct {
 	Additional_gralloc_10_usage_bits  *string `json:",omitempty"`
 	Has_legacy_camera_hal1  *bool `json:",omitempty"`
 	Needs_legacy_camera_hal1_dyn_native_handle  *bool `json:",omitempty"`
+	Should_skip_waiting_for_qsee  *bool `json:",omitempty"`
 	Supports_hw_fde  *bool `json:",omitempty"`
 	Supports_hw_fde_perf  *bool `json:",omitempty"`
 	Supports_legacy_hw_fde  *bool `json:",omitempty"`
