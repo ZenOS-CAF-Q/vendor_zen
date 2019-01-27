@@ -47,4 +47,5 @@ PRODUCT_PACKAGES += \
 
 # Google Packages
 PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt
+    SoundPickerPrebuilt \
+    Wallpapers
