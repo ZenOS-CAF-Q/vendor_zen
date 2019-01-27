@@ -44,3 +44,7 @@ PRODUCT_PACKAGES += \
     SettingsBlackTheme \
     SystemBlackTheme \
     SysuiQsBlackTheme
+
+# Google Packages
+PRODUCT_PACKAGES += \
+    SoundPickerPrebuilt
