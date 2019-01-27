@@ -32,13 +32,17 @@ ifeq ($(ZEN_OFFICIAL),true)
       endif
 endif
 
+TARGET_PRODUCT_SHORT := $(subst zen_,,$(ZEN_BUILD_TYPE))
+
 ZEN_VERSION := ZenOS-$(ZEN_MOD_VERSION)-$(CURRENT_DEVICE)-$(ZEN_BUILD_TYPE)-$(shell date -u +%Y%m%d)
+ROM_FINGERPRINT := ZenOS/$(PLATFORM_VERSION)/$(TARGET_PRODUCT_SHORT)/$(DATE)
 
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.zen.version=$(ZEN_VERSION) \
   ro.zen.releasetype=$(ZEN_BUILD_TYPE) \
-  ro.mod.version=$(ZEN_MOD_VERSION)
+  ro.mod.version=$(ZEN_MOD_VERSION) \
+  ro.zen.fingerprint=$(ROM_FINGERPRINT)
 
 ZEN_DISPLAY_VERSION := ZenOS-$(ZEN_MOD_VERSION)-$(ZEN_BUILD_TYPE)
 
