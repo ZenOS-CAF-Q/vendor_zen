@@ -5,3 +5,5 @@ include vendor/zen/configs/BoardConfigQcom.mk
 endif
 
 include vendor/zen/configs/BoardConfigSoong.mk
+
+PRODUCT_SOONG_NAMESPACES += $(PATHMAP_SOONG_NAMESPACES)
