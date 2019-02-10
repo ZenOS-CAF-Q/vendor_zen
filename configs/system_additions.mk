@@ -49,3 +49,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
     Wallpapers
+
+# ZenOS Additions
+# Weather
+PRODUCT_PACKAGES += \
+    WeatherClient
+
+# Weather client
+PRODUCT_COPY_FILES += \
+    vendor/zen/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+    vendor/zen/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
