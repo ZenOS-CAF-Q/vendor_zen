@@ -51,9 +51,9 @@ PRODUCT_PACKAGES += \
     Wallpapers
 
 # ZenOS Additions
-# Weather
 PRODUCT_PACKAGES += \
-    WeatherClient
+    WeatherClient \
+    YogaQuickStep
 
 # Weather client
 PRODUCT_COPY_FILES += \
