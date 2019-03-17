@@ -43,6 +43,10 @@ PRODUCT_COPY_FILES += \
     vendor/zen/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
 endif
 
+# ZenOS Common
+PRODUCT_COPY_FILES += \
+    vendor/zen/prebuilt/common/etc/permissions/privapp-permissions-zen.xml:system/etc/permissions/privapp-permissions-zen.xml
+
 # ART definitions
 include vendor/zen/configs/art.mk
 
