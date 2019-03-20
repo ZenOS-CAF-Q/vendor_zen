@@ -47,6 +47,10 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/zen/prebuilt/common/etc/permissions/privapp-permissions-zen.xml:system/etc/permissions/privapp-permissions-zen.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/zen/configs/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
+
 # ART definitions
 include vendor/zen/configs/art.mk
 
