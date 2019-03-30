@@ -54,7 +54,8 @@ PRODUCT_PACKAGES += \
 # ZenOS Additions
 PRODUCT_PACKAGES += \
     WeatherClient \
-    YogaQuickStep
+    YogaQuickStep \
+    CustomDoze
 
 # Weather client
 PRODUCT_COPY_FILES += \
