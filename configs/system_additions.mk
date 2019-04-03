@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
+# Settings Icon Tint
+PRODUCT_PACKAGES += \
+    SettingsIconTint
+
 # Google Packages
 PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
