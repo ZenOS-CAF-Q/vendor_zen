@@ -48,7 +48,8 @@ PRODUCT_PACKAGES += \
 
 # Settings Icon Tint
 PRODUCT_PACKAGES += \
-    SettingsIconTint
+    SettingsIconTint \
+    SettingsIconTintDark
 
 # Google Packages
 PRODUCT_PACKAGES += \
