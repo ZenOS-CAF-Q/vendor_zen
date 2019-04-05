@@ -64,7 +64,8 @@ PRODUCT_PACKAGES += \
     QStileNinja \
     QStilePokesign \
     QStileWavey \
-    QStileInkDrop
+    QStileInkDrop \
+    QStileCookie
 
 # Google Packages
 PRODUCT_PACKAGES += \
