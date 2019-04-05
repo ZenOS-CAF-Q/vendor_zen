@@ -63,7 +63,8 @@ PRODUCT_PACKAGES += \
     QStileDottedCircle \
     QStileNinja \
     QStilePokesign \
-    QStileWavey
+    QStileWavey \
+    QStileInkDrop
 
 # Google Packages
 PRODUCT_PACKAGES += \
