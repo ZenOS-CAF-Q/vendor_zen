@@ -51,6 +51,13 @@ PRODUCT_PACKAGES += \
     SettingsIconTint \
     SettingsIconTintDark
 
+# QS tile styles
+PRODUCT_PACKAGES += \
+    QStileCircleTrim \
+    QStileDefault \
+    QStileDualToneCircle \
+    QStileSquircleTrim
+
 # Google Packages
 PRODUCT_PACKAGES += \
     SoundPickerPrebuilt \
