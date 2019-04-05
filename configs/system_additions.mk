@@ -56,7 +56,14 @@ PRODUCT_PACKAGES += \
     QStileCircleTrim \
     QStileDefault \
     QStileDualToneCircle \
-    QStileSquircleTrim
+    QStileSquircleTrim \
+    QStileAttemptMountain \
+    QStileCircleDualTone \
+    QStileCircleGradient \
+    QStileDottedCircle \
+    QStileNinja \
+    QStilePokesign \
+    QStileWavey
 
 # Google Packages
 PRODUCT_PACKAGES += \
