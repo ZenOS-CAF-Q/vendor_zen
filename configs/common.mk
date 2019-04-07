@@ -55,6 +55,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/zen/configs/permissions/custom-power-whitelist.xml:system/etc/sysconfig/custom-power-whitelist.xml
 
+# Copy all custom init rc files
+$(foreach f,$(wildcard vendor/zen/prebuilt/common/etc/init/*.rc),\
+    $(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
+
 # ART definitions
 include vendor/zen/configs/art.mk
 
