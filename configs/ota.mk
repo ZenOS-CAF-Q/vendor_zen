@@ -17,4 +17,7 @@ ifeq ($(ZEN_BUILD_TYPE), OFFICIAL)
 PRODUCT_PACKAGES += \
     Updater
 
+PRODUCT_COPY_FILES += \
+    vendor/zen/prebuilt/common/etc/permissions/com.zen.updater.xml:system/etc/permissions/com.zen.updater.xml
+
 endif
