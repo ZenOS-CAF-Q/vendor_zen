@@ -64,6 +64,9 @@ include vendor/zen/configs/packages.mk
 # Branding
 include vendor/zen/configs/version.mk
 
+# ZenOTA
+include vendor/zen/configs/ota.mk
+
 # System Additions
 include vendor/zen/configs/system_additions.mk
 
