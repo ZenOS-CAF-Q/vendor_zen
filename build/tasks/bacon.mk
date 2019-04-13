@@ -22,4 +22,5 @@ ZEN_TARGET_PACKAGE := $(PRODUCT_OUT)/$(ZEN_VERSION).zip
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
 	$(hide) ln -f $(INTERNAL_OTA_PACKAGE_TARGET) $(ZEN_TARGET_PACKAGE)
 	$(hide) $(MD5SUM) $(ZEN_TARGET_PACKAGE) | sed "s|$(PRODUCT_OUT)/||" > $(ZEN_TARGET_PACKAGE).md5sum
+	$(hide) ./vendor/zen/tools/generate_ota_info.sh $(ZEN_TARGET_PACKAGE)
 	@echo "Package Complete: $(ZEN_TARGET_PACKAGE)" >&2
