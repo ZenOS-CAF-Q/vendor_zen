@@ -45,8 +45,8 @@ fi
   "packages/providers/DownloadProvider"
   "packages/services/Telecomm"
   "packages/services/Telephony"
-  "system/core"
   "system/sepolicy"
+  "system/update_engine"
   "system/vold"
 )
  function merge_manifest() {
