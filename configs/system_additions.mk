@@ -46,6 +46,10 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme
 
+# Fonts
+PRODUCT_PACKAGES += \
+    CustomFonts
+
 # Settings Icon Tint
 PRODUCT_PACKAGES += \
     SettingsIconTint \

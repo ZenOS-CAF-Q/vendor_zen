@@ -84,4 +84,9 @@
     <!-- Enable the RingtonePickerActivity in 'com.android.providers.media'. -->
     <bool name="config_defaultRingtonePickerEnabled">false</bool>
 
+    <!-- System font packages (overlay in vendor) -->
+    <string-array name="config_fontPackages" translatable="false">
+        <item>com.custom.fonts</item>
+    </string-array>
+
 </resources>
