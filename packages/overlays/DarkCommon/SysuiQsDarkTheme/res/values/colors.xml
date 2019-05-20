@@ -10,4 +10,7 @@
     <color name="qs_tile_icon_active">#2d2d2d</color>
     <color name="qs_tile_icon_inactive">#cbcbcb</color>
 
+    <!-- Keyboard shortcuts colors -->
+    <color name="ksh_keyword_color">#fff</color>
+
 </resources>
