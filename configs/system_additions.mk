@@ -29,6 +29,7 @@ PRODUCT_PACKAGES += \
     PixelBaseTheme \
     PixelTheme \
     PurpleTheme \
+    QPurpleTheme \
     RedTheme \
     StockBaseTheme \
     StockFixedBaseTheme \
