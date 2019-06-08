@@ -47,7 +47,9 @@ PRODUCT_PACKAGES += \
     SystemBlackTheme \
     SysuiQsBlackTheme \
     SettingsIntelligenceDark \
-    SettingsIntelligenceBlack
+    SettingsIntelligenceBlack \
+    DocumentsUIDark \
+    DocumentsUIBlack
 
 # Fonts
 PRODUCT_PACKAGES += \
