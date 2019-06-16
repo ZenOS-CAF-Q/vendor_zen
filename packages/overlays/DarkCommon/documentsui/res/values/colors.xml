@@ -16,8 +16,16 @@
 
 <resources>
 
+    <color name="material_grey_50">@*android:color/primary_device_default_dark</color>
+    <color name="material_grey_300">@*android:color/accent_device_default_light</color>
+    <color name="material_grey_400">#ffbdbdbd</color>
+    <color name="material_teal_700">#ff00796b</color>
+
     <color name="accent">@*android:color/accent_device_default_light</color>
-    <color name="primary_dark">#ff1e1f22</color>
+    <color name="accent_dark">@*android:color/accent_device_default_light</color>
+    <color name="action_mode">@*android:color/accent_device_default_light</color>
+    <color name="primary">@*android:color/primary_device_default_dark</color>
+    <color name="primary_dark">@*android:color/primary_device_default_dark</color>
     <color name="tool_bar_color">#ff1e1f22</color>
     <color name="window_background">#ff1e1f22</color>
     <color name="drawer_background">#ff1e1f22</color>
@@ -65,4 +73,5 @@
     <color name="table_row_key">#fff</color>
 
     <color name="navigation_bar_color">@*android:color/primary_device_default_dark</color>
+
 </resources>
