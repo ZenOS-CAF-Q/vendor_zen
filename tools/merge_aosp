@@ -35,7 +35,6 @@ fi
   "bionic"
   "external/selinux"
   "external/tinycompress"
-  "prebuilts/build-tools"
   "frameworks/av"
   "frameworks/compile/mclinker"
   "frameworks/base"
