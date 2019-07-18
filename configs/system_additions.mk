@@ -62,10 +62,10 @@ PRODUCT_PACKAGES += \
 
 # QS tile styles
 PRODUCT_PACKAGES += \
-    QStileCircleTrim \
-    QStileDefault \
-    QStileDualToneCircle \
-    QStileSquircleTrim \
+    QStileSquare \
+    QStileRoundedSquare \
+    QStileSquircle \
+    QStileTearDrop \
     QStileAttemptMountain \
     QStileCircleDualTone \
     QStileCircleGradient \
