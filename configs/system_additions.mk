@@ -68,11 +68,7 @@ PRODUCT_PACKAGES += \
     QStileTearDrop \
     QStileAttemptMountain \
     QStileCircleDualTone \
-    QStileCircleGradient \
     QStileDottedCircle \
-    QStileNinja \
-    QStilePokesign \
-    QStileWavey \
     QStileInkDrop \
     QStileCookie
 
