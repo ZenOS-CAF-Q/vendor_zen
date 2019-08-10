@@ -69,7 +69,7 @@ else ifneq ($(filter $(UM_4_4_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := msm8998
 else ifneq ($(filter $(UM_4_9_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := sdm845
-else ifeq ($(call is-board-platform-in-list, $(UM_4_14_FAMILY)),true)
+else ifneq ($(filter $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := sm8150
 else
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
