@@ -1,3 +1,8 @@
+# Platform names
+MSMNILE := msmnile #SM8150
+MSMSTEPPE := sm6150
+TRINKET := trinket #SM6125
+
 A_FAMILY := msm7x27a msm7x30 msm8660 msm8960
 B_FAMILY := msm8226 msm8610 msm8974
 B64_FAMILY := msm8992 msm8994
@@ -5,7 +10,7 @@ BR_FAMILY := msm8909 msm8916
 UM_3_18_FAMILY := msm8937 msm8953 msm8996
 UM_4_4_FAMILY := msm8998 sdm660
 UM_4_9_FAMILY := sdm845 sdm710
-UM_4_14_FAMILY := sm8150 sm6150
+UM_4_14_FAMILY := $(MSMNILE) $(MSMSTEPPE) $(TRINKET)
 UM_PLATFORMS := $(UM_3_18_FAMILY) $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
 
 BOARD_USES_ADRENO := true
@@ -50,7 +55,7 @@ ifeq ($(call is-board-platform-in-list, $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)),true
 endif
 
 # List of targets that use master side content protection
-MASTER_SIDE_CP_TARGET_LIST := msm8996 msm8998 sdm660 sdm845 sm6150 sm8150
+MASTER_SIDE_CP_TARGET_LIST := msm8996 $(UM_4_4_FAMILY) $(UM_4_9_FAMILY) $(UM_4_14_FAMILY)
 
 # Every qcom platform is considered a vidc target
 MSM_VIDC_TARGET_LIST := $(TARGET_BOARD_PLATFORM)
