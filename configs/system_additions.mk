@@ -80,7 +80,8 @@ PRODUCT_PACKAGES += \
 # ZenOS Additions
 PRODUCT_PACKAGES += \
     WeatherClient \
-    CustomDoze
+    CustomDoze \
+    Longshot
 
 # Weather client
 PRODUCT_COPY_FILES += \
