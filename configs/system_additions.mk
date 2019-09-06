@@ -81,7 +81,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     WeatherClient \
     CustomDoze \
-    Longshot
+    Longshot \
+    Recorder
+
+# Some permissions
+PRODUCT_COPY_FILES += \
+    vendor/zen/configs/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+    vendor/zen/configs/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
 
 # Weather client
 PRODUCT_COPY_FILES += \
