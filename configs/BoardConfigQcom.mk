@@ -70,12 +70,16 @@ else ifneq ($(filter $(BR_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := msm8916
 else ifneq ($(filter $(UM_3_18_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := msm8996
+    TARGET_USES_QCOM_UM_3_18_FAMILY := true
 else ifneq ($(filter $(UM_4_4_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := msm8998
+    TARGET_USES_QCOM_UM_4_4_FAMILY := true
 else ifneq ($(filter $(UM_4_9_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := sdm845
+    TARGET_USES_QCOM_UM_4_9_FAMILY := true
 else ifneq ($(filter $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
     QCOM_HARDWARE_VARIANT := sm8150
+    TARGET_USES_QCOM_UM_4_14_FAMILY := true
 else
     QCOM_HARDWARE_VARIANT := $(TARGET_BOARD_PLATFORM)
 endif
@@ -83,6 +87,21 @@ endif
 # Allow a device to manually override which HALs it wants to use
 ifneq ($(OVERRIDE_QCOM_HARDWARE_VARIANT),)
 QCOM_HARDWARE_VARIANT := $(OVERRIDE_QCOM_HARDWARE_VARIANT)
+endif
+
+# Required for frameworks/native
+ifneq ($(filter $(UM_3_18_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
+    TARGET_USES_QCOM_UM_FAMILY := true
+    TARGET_USES_QCOM_UM_3_18_FAMILY := true
+else ifneq ($(filter $(UM_4_4_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
+    TARGET_USES_QCOM_UM_FAMILY := true
+    TARGET_USES_QCOM_UM_4_4_FAMILY := true
+else ifneq ($(filter $(UM_4_9_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
+    TARGET_USES_QCOM_UM_FAMILY := true
+    TARGET_USES_QCOM_UM_4_9_FAMILY := true
+else ifneq ($(filter $(UM_4_14_FAMILY),$(QCOM_HARDWARE_VARIANT)),)
+    TARGET_USES_QCOM_UM_FAMILY := true
+    TARGET_USES_QCOM_UM_4_14_FAMILY := true
 endif
 
 include vendor/zen/build/core/qcom_target.mk

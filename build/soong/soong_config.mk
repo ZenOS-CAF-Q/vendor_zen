@@ -1,3 +1,5 @@
+include vendor/zen/configs/BoardConfigQcom.mk
+
 add_json_str_omitempty = $(if $(strip $(2)),$(call add_json_str, $(1), $(2)))
 add_json_val_default = $(call add_json_val, $(1), $(if $(strip $(2)), $(2), $(3)))
 
@@ -23,6 +25,11 @@ $(call add_json_bool, Uses_qcom_bsp_legacy,                 $(filter true,$(TARG
 $(call add_json_bool, Uses_metadata_as_fde_key,             $(filter true,$(TARGET_USES_METADATA_AS_FDE_KEY)))
 $(call add_json_bool, Uses_qti_camera_device,               $(filter true,$(TARGET_USES_QTI_CAMERA_DEVICE)))
 $(call add_json_str_omitempty, Target_process_sdk_version_override, $(TARGET_PROCESS_SDK_VERSION_OVERRIDE))
+$(call add_json_bool, Uses_qcom_um_family, $(filter true,     $(TARGET_USES_QCOM_UM_FAMILY)))
+$(call add_json_bool, Uses_qcom_um_3_18_family, $(filter true,$(TARGET_USES_QCOM_UM_3_18_FAMILY)))
+$(call add_json_bool, Uses_qcom_um_4_4_family, $(filter true, $(TARGET_USES_QCOM_UM_4_4_FAMILY)))
+$(call add_json_bool, Uses_qcom_um_4_9_family, $(filter true, $(TARGET_USES_QCOM_UM_4_9_FAMILY)))
+$(call add_json_bool, Uses_qcom_um_4_14_family, $(filter true,$(TARGET_USES_QCOM_UM_4_14_FAMILY)))
 
 # This causes the build system to strip out the last comma in our nested struct, to keep the JSON valid.
 _contents := $(_contents)__SV_END
