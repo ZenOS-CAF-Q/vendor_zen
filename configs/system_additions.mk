@@ -13,43 +13,43 @@
 # limitations under the License.
 
 # Accent and Base packages
-PRODUCT_PACKAGES += \
-    AmberTheme \
-    BlueTheme \
-    CyanTheme \
-    DeepOrangeTheme \
-    DeepPurpleTheme \
-    GreenTheme \
-    IndigoTheme \
-    LightBlueTheme \
-    LightGreenTheme \
-    LimeTheme \
-    OrangeTheme \
-    PinkTheme \
-    PixelBaseTheme \
-    PixelTheme \
-    PurpleTheme \
-    QPurpleTheme \
-    RedTheme \
-    StockBaseTheme \
-    StockFixedBaseTheme \
-    StockTheme \
-    YellowTheme \
-    MintGreenTheme
+#PRODUCT_PACKAGES += \
+#    AmberTheme \
+#    BlueTheme \
+#    CyanTheme \
+#    DeepOrangeTheme \
+#    DeepPurpleTheme \
+#    GreenTheme \
+#    IndigoTheme \
+#    LightBlueTheme \
+#    LightGreenTheme \
+#    LimeTheme \
+#    OrangeTheme \
+#    PinkTheme \
+#    PixelBaseTheme \
+#    PixelTheme \
+#    PurpleTheme \
+#    QPurpleTheme \
+#    RedTheme \
+#    StockBaseTheme \
+#    StockFixedBaseTheme \
+#    StockTheme \
+#    YellowTheme \
+#    MintGreenTheme
 
 # Dark/BlackUI Packages
-PRODUCT_PACKAGES += \
-    GBoardDarkTheme \
-    SettingsDarkTheme \
-    SystemDarkTheme \
-    SysuiQsDarkTheme \
-    SettingsBlackTheme \
-    SystemBlackTheme \
-    SysuiQsBlackTheme \
-    SettingsIntelligenceDark \
-    SettingsIntelligenceBlack \
-    DocumentsUIDark \
-    DocumentsUIBlack
+#PRODUCT_PACKAGES += \
+#    GBoardDarkTheme \
+#    SettingsDarkTheme \
+#    SystemDarkTheme \
+#    SysuiQsDarkTheme \
+#    SettingsBlackTheme \
+#    SystemBlackTheme \
+#    SysuiQsBlackTheme \
+#    SettingsIntelligenceDark \
+#    SettingsIntelligenceBlack \
+#    DocumentsUIDark \
+#    DocumentsUIBlack
 
 # Fonts
 PRODUCT_PACKAGES += \
