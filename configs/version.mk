@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ZEN_MOD_VERSION = v2.0
+ZEN_MOD_VERSION = v10.0
 
 ifndef ZEN_BUILD_TYPE
     ZEN_BUILD_TYPE := UNOFFICIAL
