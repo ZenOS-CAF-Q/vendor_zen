@@ -52,8 +52,8 @@
 #    DocumentsUIBlack
 
 # Fonts
-PRODUCT_PACKAGES += \
-    CustomFonts
+# PRODUCT_PACKAGES += \
+#    CustomFonts
 
 # Settings Icon Tint
 PRODUCT_PACKAGES += \
@@ -79,8 +79,8 @@ PRODUCT_PACKAGES += \
 
 # ZenOS Additions
 PRODUCT_PACKAGES += \
-    WeatherClient \
-    CustomDoze \
+#    WeatherClient \
+#    CustomDoze \
     Longshot \
     Recorder
 
@@ -90,11 +90,11 @@ PRODUCT_COPY_FILES += \
     vendor/zen/configs/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
 
 # Weather client
-PRODUCT_COPY_FILES += \
-    vendor/zen/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
-    vendor/zen/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
+# PRODUCT_COPY_FILES += \
+#    vendor/zen/etc/permissions/org.pixelexperience.weather.client.xml:system/etc/permissions/org.pixelexperience.weather.client.xml \
+#    vendor/zen/etc/default-permissions/org.pixelexperience.weather.client.xml:system/etc/default-permissions/org.pixelexperience.weather.client.xml
 
 # Cutout control overlays
-PRODUCT_PACKAGES += \
-    HideCutout \
-    StatusBarStock
+# PRODUCT_PACKAGES += \
+#    HideCutout \
+#    StatusBarStock
