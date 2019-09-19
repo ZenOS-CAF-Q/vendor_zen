@@ -80,7 +80,6 @@ include vendor/zen/configs/ota.mk
 include vendor/zen/configs/system_additions.mk
 
 # Overlays
-PRODUCT_PACKAGE_OVERLAYS += \
-    vendor/zen/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/zen/overlay/common
 
 BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/zen/build/core/system_rro.mk
