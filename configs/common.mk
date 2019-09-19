@@ -81,5 +81,3 @@ include vendor/zen/configs/system_additions.mk
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += vendor/zen/overlay/common
-
-BUILD_RRO_SYSTEM_PACKAGE := $(TOPDIR)vendor/zen/build/core/system_rro.mk
