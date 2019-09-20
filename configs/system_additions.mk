@@ -56,38 +56,38 @@
 #    CustomFonts
 
 # Settings Icon Tint
-PRODUCT_PACKAGES += \
-    SettingsIconTint \
-    SettingsIconTintDark
+# PRODUCT_PACKAGES += \
+#    SettingsIconTint \
+#    SettingsIconTintDark
 
 # QS tile styles
-PRODUCT_PACKAGES += \
-    QStileSquare \
-    QStileRoundedSquare \
-    QStileSquircle \
-    QStileTearDrop \
-    QStileAttemptMountain \
-    QStileCircleDualTone \
-    QStileDottedCircle \
-    QStileInkDrop \
-    QStileCookie
+# PRODUCT_PACKAGES += \
+#    QStileSquare \
+#    QStileRoundedSquare \
+#    QStileSquircle \
+#    QStileTearDrop \
+#    QStileAttemptMountain \
+#    QStileCircleDualTone \
+#    QStileDottedCircle \
+#    QStileInkDrop \
+#    QStileCookie
 
 # Google Packages
-PRODUCT_PACKAGES += \
-    SoundPickerPrebuilt \
-    Wallpapers
+# PRODUCT_PACKAGES += \
+#    SoundPickerPrebuilt \
+#    Wallpapers
 
 # ZenOS Additions
-PRODUCT_PACKAGES += \
+# PRODUCT_PACKAGES += \
 #    WeatherClient \
 #    CustomDoze \
-    Longshot \
-    Recorder
+#    Longshot \
+#    Recorder
 
 # Some permissions
-PRODUCT_COPY_FILES += \
-    vendor/zen/configs/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
-    vendor/zen/configs/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
+# PRODUCT_COPY_FILES += \
+#    vendor/zen/configs/permissions/privapp-permissions-recorder.xml:system/etc/permissions/privapp-permissions-recorder.xml \
+#    vendor/zen/configs/permissions/org.pixelexperience.recorder.xml:system/etc/permissions/org.pixelexperience.recorder.xml
 
 # Weather client
 # PRODUCT_COPY_FILES += \

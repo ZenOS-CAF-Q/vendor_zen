@@ -77,7 +77,7 @@ include vendor/zen/configs/version.mk
 include vendor/zen/configs/ota.mk
 
 # System Additions
-include vendor/zen/configs/system_additions.mk
+# include vendor/zen/configs/system_additions.mk
 
 # Overlays
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/zen/overlay
